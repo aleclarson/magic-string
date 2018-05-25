@@ -161,7 +161,7 @@ export default class MagicString {
 		});
 
 		return {
-			file: options.file ? options.file.split(/[/\\]/).pop() : null,
+			file: options.file ? options.file.split(/[/\\]/).pop() : '',
 			sources: [options.source ? getRelativePath(options.file || '', options.source) : null],
 			sourcesContent: options.includeContent ? [this.original] : [null],
 			names,
