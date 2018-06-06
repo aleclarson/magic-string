@@ -1,5 +1,10 @@
 # magic-string changelog
 
+## 0.25.0
+
+* Make `generateMap` return null if no changes were made
+* Change the default value of `SourceMap#file` to an empty string
+
 ## 0.24.1
 
 * Add `lastLine` and `lastChar` methods ([#142](https://github.com/Rich-Harris/magic-string/pull/142))
