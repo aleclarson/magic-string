@@ -170,6 +170,9 @@ export default class MagicString {
 	}
 
 	generateMap(options) {
+		if (this.firstChunk === this.lastChunk) {
+			return null;
+		}
 		return new SourceMap(this.generateDecodedMap(options));
 	}
 
