@@ -1,5 +1,5 @@
 {
-  "name": "magic-string",
+  "name": "@cush/magic-string",
   "description": "Modify strings, generate sourcemaps",
   "author": "Rich Harris",
   "version": "0.25.0",
