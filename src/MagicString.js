@@ -170,10 +170,16 @@ export default class MagicString {
 	}
 
 	generateMap(options) {
-		if (this.firstChunk === this.lastChunk) {
-			return null;
+		if (
+			this.firstChunk !== this.lastChunk ||
+			this.firstChunk.intro ||
+			this.firstChunk.outro ||
+			this.intro ||
+			this.outro
+		) {
+			return new SourceMap(this.generateDecodedMap(options));
 		}
-		return new SourceMap(this.generateDecodedMap(options));
+		return null;
 	}
 
 	getIndentString() {
